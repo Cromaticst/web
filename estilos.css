@@ -1,0 +1,214 @@
+/* Estilo base para móviles */
+body {
+  font-size: 16px;
+  padding: 16px;
+}
+
+/* Estilo para pantallas medianas (tablets) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 24px;
+  }
+}
+
+/* Estilo para pantallas grandes (escritorio) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+    padding: 32px;
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #efefef;
+  color: #111;
+}
+
+header {
+  background-color: #000;
+  padding: 20px 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo {
+  height: 40px; /* Ajusta el tamaño del logo */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.menu a.active {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding: 6px 18px;
+  transition: 0.3s ease;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 18px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.menu li a.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.hero {
+  padding: 100px 40px;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.btn-oval {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 40px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-oval:hover {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
+.menu a.active {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding: 6px 18px;
+  transition: 0.3s ease;
+}
+
+
+/* Estilos para ocultar/mostrar con animación */
+.oculto {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #000;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+.whatsapp-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.whatsapp-group select,
+.whatsapp-group input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#city {
+  text-transform: capitalize;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+/* Aplica misma fuente y estilo a todos los placeholders */
+::placeholder {
+  font-family: 'TuFuentePrincipal', sans-serif; /* Reemplaza si usas otra */
+  font-size: 16px; /* O el mismo tamaño que uses para inputs */
+  color: #999; /* Opcional, gris claro */
+  opacity: 1; /* Asegura que no esté muy transparente */
+}

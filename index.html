@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cromatic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <img src="tu-logo.png" alt="Cromatic-Logo" class="logo" />
+      <ul class="menu">
+        <li><a href="#nuestro-adn">Nuestro ADN</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#cotizar">Cotizar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>Creamos marcas con identidad, historia y diseño</h1>
+      <p>Conectamos el propósito de tu negocio con tus audiencias, diseñando experiencias visuales que trascienden.</p>
+      <a href="#cotizar" class="btn-oval">COTIZAR</a>
+    </div>
+  </section>
+
+  <!-- Sección que debe aparecer solo al hacer scroll -->
+  <section id="nuestro-adn" class="oculto">
+    <div class="contenedor">
+      <h2>NUESTRO EQUIPO</h2>
+      <img src="equipo-banner.jpg" alt="Nuestro equipo" style="width: 100%; margin: 40px 0; border-radius: 20px;">
+      <div style="display: flex; flex-direction: column; gap: 40px; margin-top: 60px;">
+        <div><h3>MICHELLE FERNANDA</h3><p>GENERAL MANAGER | CO</p></div>
+        <div><h3>YEDXON HURTADO</h3><p>PROJECT MANAGER</p></div>
+        <div><h3>MARÍA JOSÉ</h3><p>TRAFFIC MANAGER</p></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mostrar sección al hacer scroll (IntersectionObserver)
+    const adnSection = document.getElementById('nuestro-adn');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          adnSection.classList.remove('oculto');
+          adnSection.classList.add('visible');
+          observer.unobserve(adnSection); // Detener observación una vez visible
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    observer.observe(adnSection);
+  </script>
+
+</body>
+	<section id="cotizar" style="background-color: #efefef; padding: 80px 20px;">
+  <div style="
+    max-width: 700px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+  ">
+	  
+    <h2 style="font-size: 1.8rem; font-weight: 700;">Vamos a crear algo extraordinario juntos.</h2>
+    <p style="margin-bottom: 30px;">Al completar el formulario, nos podremos en contacto contigo lo mas pronto posible.</p>
+
+  <form action="https://formspree.io/f/mdkgwqpp" method="POST">
+  <label for="name">Nombre completo:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="whatsapp">Número de WhatsApp:</label>
+  <div class="whatsapp-group">
+    <select id="countryCode" name="countryCode" required>
+      <option value="+57">🇨🇴 +57 (Colombia)</option>
+      <option value="+52">🇲🇽 +52 (México)</option>
+      <option value="+1">🇺🇸 +1 (EE. UU.)</option>
+      <option value="+34">🇪🇸 +34 (España)</option>
+      <option value="+51">🇵🇪 +51 (Perú)</option>
+    </select>
+    <input type="tel" id="whatsapp" name="whatsapp" placeholder="3001234567" required>
+  </div>
+
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="city">Ciudad de residencia:</label>
+  <input type="text" id="city" name="city" placeholder="Ej. Bogotá, CDMX, Lima" required>
+
+  <label for="brandCity">¿En qué ciudad trabaja tu marca?</label>
+  <input type="text" id="brandCity" name="brandCity" placeholder="Dónde va operar tu marca" required>
+
+  <label for="brandName">Nombre de tu marca:</label>
+  <input type="text" id="brandName" name="brandName" placeholder="Ej. Encanto Fashion, Café el Sur" required>
+
+  <label for="brandDescription">¿De qué trata tu marca?</label>
+  <textarea id="brandDescription" name="brandDescription" rows="3" placeholder="Cuéntanos a qué se dedica tu marca" required></textarea>
+
+  <label for="service">Servicio requerido:</label>
+  <select id="service" name="service" required>
+    <option value="">-- Selecciona un servicio --</option>
+    <option value="diseño de marca">Diseño de Marca</option>
+    <option value="branding">Branding</option>
+    <option value="packaging">Packaging</option>
+    <option value="ilustracion">Ilustración</option>
+    <option value="editorial">Diseño Editorial</option>
+  </select>
+
+  <label for="startTime">¿Cuándo planeas comenzar?</label>
+  <select id="startTime" name="startTime" required>
+    <option value="">-- Selecciona cuándo --</option>
+    <option value="ahora">De inmediato</option>
+    <option value="luego">El próximo mes</option>
+    <option value="mucho despues">En los próximos 2-3 meses</option>
+  </select>
+
+  <label for="message">Detalles del proyecto:</label>
+  <textarea id="message" name="message" rows="4" required></textarea>
+
+  <button type="submit" class="btn-oval" style="margin-top: 30px;">COTIZAR</button>
+</form>
+
+
+    <p style="margin-top: 20px;">O escríbenos a <a href="cromaticcreativestudio@gmail.com">cromaticcreativestudio@gmail.com</a></p>
+  </div>
+</section>
+
+</html>

@@ -30,19 +30,62 @@
   </section>
 
   <!-- Sección que debe aparecer solo al hacer scroll -->
-  <section id="nuestro-adn" class="oculto">
-    <div class="contenedor">
-      <h2>NUESTRO EQUIPO</h2>
+<section id="nuestro-adn" class="oculto">
+  <div class="contenedor">
+      <h2>NUESTRO ADN</h2>
+	  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px;">
+    <div style="flex: 1; padding: 20px; background-color: #000; color: #efefef; box-sizing: border-box; border-radius: 30px">
+          <h1 style="font-size:2.0em;">Convierte tu visión en una explosión de color.</h1>    
+        
+    </div>
+    <div style="flex: 1; padding: 20px; background-color: #000 color: #efefef; box-sizing: border-box;">
+        <p>
+            En Cromatic, creemos que el color es el lenguaje del alma. No es solo un elemento de diseño,
+            es la esencia de la expresión. Te invitamos a explorar un universo donde cada tono cuenta una historia,
+            donde la paleta es tu lienzo y la creatividad no tiene límites. Con Chromatic, tu visión cobra vida
+            en una sinfonía de color, vibrante y cautivadora.
+        </p>
+        
+    </div>
+		  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 20px;">
+    <div style="margin-top: 1rem; background: none; border: 2px solid #000000; color: #000000; padding: 0.5rem 1rem; cursor: pointer; border-radius: 30px">
+        <h2>Misión</h2>
+        <p style="color:#000000;">
+            En Cromatic Creative Studio convertimos ideas en experiencias visuales que comunican, conectan
+            y transforman. Diseñamos con intención, fusionando creatividad, estrategia y funcionalidad
+            para dar vida a marcas, productos y mensajes que dejen huella. Nuestro compromiso es
+            materializar visiones gráficas con un enfoque auténtico, efectivo y profundamente humano.
+        </p>
+    </div>
+    <div style="margin-top: 1rem; background: none; border: 2px solid #000000; color: #000000; padding: 0.5rem 1rem; cursor: pointer; border-radius: 30px">
+        <h2>Visión</h2>
+        <p style="color:#000000;">
+            Ser un referente en diseño creativo y comunicación visual, reconocido por nuestra capacidad de
+            transformar conceptos en realidades memorables. Aspiramos a inspirar y evolucionar junto a
+            nuestros clientes, impulsando marcas con identidad, coherencia y propósito en cada proyecto
+            que construimos.
+        </p>
+    </div>
+</div>
       <img src="equipo-banner.jpg" alt="Nuestro equipo" style="width: 100%; margin: 40px 0; border-radius: 20px;">
       <div style="display: flex; flex-direction: column; gap: 40px; margin-top: 60px;">
-        <div><h3>MICHELLE FERNANDA</h3><p>GENERAL MANAGER | CO</p></div>
-        <div><h3>YEDXON HURTADO</h3><p>PROJECT MANAGER</p></div>
-        <div><h3>MARÍA JOSÉ</h3><p>TRAFFIC MANAGER</p></div>
+		 <h2>NUESTRO EQUIPO</h2>
+    <div class="miembros-equipo">
+      <div class="miembro">
+        <h3>MICHELLE PELAEZ</h3>
+        <p>GENERAL MANAGER | CO</p>
       </div>
+      <div class="miembro">
+        <h3>YEDXON HURTADO</h3>
+        <p>PROJECT MANAGER</p>
+      </div>
+      <div class="miembro">
+        <h3>MARÍA JOSÉ CAÑAS</h3>
+        <p>TRAFFIC MANAGER</p>
     </div>
   </section>
 
-  <script>
+<script>
     // Mostrar sección al hacer scroll (IntersectionObserver)
     const adnSection = document.getElementById('nuestro-adn');
     const observer = new IntersectionObserver(entries => {
@@ -58,8 +101,80 @@
     });
     observer.observe(adnSection);
   </script>
+<section id="proceso" class="proceso-section fade-in">
+	<h2 style="font-size:2.0em;">Nuestros Procesos</h2> 
+  <div class="proceso-grid">
+    <div class="proceso-left">
+      <h3>Construimos marcas con propósito,<br> coherencia y dirección estética.</h3>
+      <a href="#cotizar" class="btn-oval">COTIZAR</a>
+    </div>
+    <div class="proceso-right">
+      <p>
+        Crear una marca va más allá del diseño visual. En nuestro estudio trabajamos desde la esencia: definimos el propósito, articulamos la narrativa y expresamos la identidad a través de una estética cuidada. 
+      </p>
+      <p>
+        No dejes tu marca en manos inexpertas. Nosotros no improvisamos: seguimos un método claro, unimos estrategia con diseño y creamos marcas que conectan y se diferencian.
+      </p>
+    </div>
+  </div>
+	</section>
 
-</body>
+  <section id="branding" class="servicio-proceso" style="background:#1B4BB5; color:#efefef; padding: 4rem 2rem;  border-radius: 20px;">
+  <h2 style="font-size: 3rem; ;">Diseño Identidad IBranding</h2>
+  <button class="toggle-fases" style="margin-top: 1rem; background: none; border: 2px solid #efefef; color: #efefef; padding: 0.5rem 1rem; cursor: pointer;">
+    VER +
+  </button>
+
+  <div class="fases-container" style="overflow: hidden; max-height: 0; transition: max-height 0.6s ease;">
+    <div class="fases" style="padding-top: 2rem;">
+      <p><strong>Fase 01: Exploración profunda</strong><br>Investigamos el corazón de tu marca por medio del brief: propósito, valores y audiencia.</p>
+      <p><strong>Fase 02: Dirección creativa</strong><br>Definimos rutas visuales alineadas con tu esencia.</p>
+      <p><strong>Fase 03: Presentación de identidad</strong><br>Presentamos la identidad con claridad para definir el rumbo.</p>
+      <p><strong>Fase 04: Ajustes y validación</strong><br>Perfeccionamos el diseño contigo hasta que todo encaje.</p>
+      <p><strong>Fase 05: Entrega final</strong><br>Entregamos todos los elementos listos para usar.</p>
+    </div>
+  </div>
+</section>
+<section id="packaging" class="servicio-proceso" style="background:#4D1775; color:#efefef; padding: 4rem 2rem;  border-radius: 20px;">
+  <h2 style="font-size: 3rem; margin: 0;">Packaging</h2>
+  <button class="toggle-fases" style="margin-top: 1rem; background: none; border: 2px solid #efefef; color: #efefef; padding: 0.5rem 1rem; cursor: pointer;">
+    VER +
+  </button>
+
+  <div class="fases-container" style="overflow: hidden; max-height: 0; transition: max-height 0.6s ease;">
+    <div class="fases" style="padding-top: 2rem;">
+      <p><strong>Fase 01: Análisis del producto</strong><br>Estudiamos el producto, su uso y su entorno de venta.</p>
+      <p><strong>Fase 02: Dirección estética</strong><br>Definimos la línea visual más adecuada para destacar en el mercado.</p>
+      <p><strong>Fase 03: Propuestas de empaque</strong><br>Diseñamos conceptos creativos con forma, materiales y gráfica.</p>
+      <p><strong>Fase 04: Diseño final</strong><br>Definimos el diseño definitivo con todos los ajustes necesarios.</p>
+      <p><strong>Fase 05: Archivos de producción</strong><br>Preparamos los archivos listos para impresión o fabricación.</p>
+    </div>
+  </div>
+</section>
+<section id="otros" class="servicio-proceso" style="background:#E54929; color:#efefef; padding: 4rem 2rem;  border-radius: 20px;">
+  <h2 style="font-size: 3rem; margin: 0;">Otros Servicios</h2>
+  <button class="toggle-fases" style="margin-top: 1rem; background: none; border: 2px solid #efefef; color: #efefef; padding: 0.5rem 1rem; cursor: pointer;">
+    VER +
+  </button>
+
+  <div class="fases-container" style="overflow: hidden; max-height: 0; transition: max-height 0.6s ease;">
+    <div class="fases" style="padding-top: 2rem;">
+       <li> Ilustración</li>
+          <li> Diseño editorial</li>
+          <li> Social media</li>
+          <li> Papelería corporativa</li>
+          <li> Menús</li>
+    </div>
+  </div>
+</section>
+<section class="bloque-cotizar">
+  <div class="contenido-cotizar">
+    <h3>¿Quieres realizarnos una propuesta diferente?</h3>
+    <p>Ponte en contacto con Nosotros, estaremos encantados de ayudarte.</p>
+    <a href="#cotizar" class="btn-cotizar">COTIZAR</a>
+  </div>
+</section>
+
 	<section id="cotizar" style="background-color: #efefef; padding: 80px 20px;">
   <div style="
     max-width: 700px;
@@ -134,5 +249,24 @@
     <p style="margin-top: 20px;">O escríbenos a <a href="cromaticcreativestudio@gmail.com">cromaticcreativestudio@gmail.com</a></p>
   </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.toggle-fases').forEach(boton => {
+      boton.addEventListener('click', () => {
+        const contenedor = boton.nextElementSibling;
 
+        const estaAbierto = contenedor.style.maxHeight && contenedor.style.maxHeight !== '0px';
+        if (estaAbierto) {
+          contenedor.style.maxHeight = '0';
+          boton.textContent = 'VER +';
+        } else {
+          contenedor.style.maxHeight = contenedor.scrollHeight + 'px';
+          boton.textContent = 'VER -';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
 </html>

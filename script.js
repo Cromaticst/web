@@ -1,5 +1,5 @@
-<body>
 <script>
+  // Resaltar enlace activo según sección visible
   window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.menu a');
@@ -18,32 +18,28 @@
         link.classList.add('active');
       }
     });
-  });
-<script>
-  const targetSection = document.getElementById('nuestro-adn');
 
-  window.addEventListener('scroll', () => {
-    // Activa la clase visible al hacer scroll
-    const rect = targetSection.getBoundingClientRect();
-    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+    // Mostrar sección "nuestro-adn" al hacer scroll
+    const targetSection = document.getElementById('nuestro-adn');
+    if (targetSection) {
+      const rect = targetSection.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
 
-    if (isVisible) {
-      targetSection.classList.add('visible');
-      targetSection.classList.remove('oculto');
-    }
-
-    // Marcar el enlace activo
-    const navLinks = document.querySelectorAll('.menu a');
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#nuestro-adn' && isVisible) {
-        link.classList.add('active');
+      if (isVisible) {
+        targetSection.classList.add('visible');
+        targetSection.classList.remove('oculto');
       }
-    });
+
+      // Marcar el enlace activo para nuestro-adn
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === '#nuestro-adn') {
+          link.classList.toggle('active', isVisible);
+        }
+      });
+    }
   });
-</script>
-<body>
-	<script>
+
+  // Scroll suave al hacer clic en botón cotizar
   document.querySelectorAll('.btn-cotizar').forEach(btn => {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
@@ -53,7 +49,26 @@
       }
     });
   });
+
+  // Animar fases al hacer clic en VER +
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButtons = document.querySelectorAll(".toggle-fases");
+
+    toggleButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const container = btn.closest(".servicio-proceso").querySelector(".fases-container");
+        const fases = container.querySelector(".fases");
+
+        container.classList.toggle("active");
+        fases.classList.toggle("show");
+
+        btn.textContent = fases.classList.contains("show") ? "VER –" : "VER +";
+      });
+    });
+  });
 </script>
+
+
 
 // JavaScript Document
 // JavaScript Document

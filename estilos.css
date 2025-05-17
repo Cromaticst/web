@@ -13,11 +13,12 @@ body {
 }
 
 /* Estilo para pantallas grandes (escritorio) */
-@media (min-width: 1024px) {
+@media (min-width: 1366px) {
   body {
     font-size: 20px;
     padding: 32px;
   }
+}
 * {
   margin: 0;
   padding: 0;
@@ -117,13 +118,7 @@ header {
   color: #000;
   border: 1px solid #000;
 }
-.menu a.active {
-  background-color: black;
-  color: white;
-  border-radius: 30px;
-  padding: 6px 18px;
-  transition: 0.3s ease;
-}
+
 
 
 /* Estilos para ocultar/mostrar con animación */
@@ -205,10 +200,204 @@ textarea {
   resize: vertical;
 }
 
+
+.servicio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.servicio-header h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.toggle-fases {
+  background: transparent;
+  color: #efefef;
+  border: 1px solid #efefef;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-fases:hover {
+  background-color: #efefef;
+  color: #1B4BB5;
+}
+
+.fases {
+  margin-top: 40px;
+ border-radius: 20px;
+}
+
+.fase {
+  margin-bottom: 2rem;
+}
+
+.fase h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.fase p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #efefef;
+}
+
+/* Animación de mostrar/ocultar */
+.fases.oculto {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fases.visible {
+  max-height: 1000px;
+  opacity: 1;
+  border-radius: 20px;
+  transform: translateY(0);
+}
+
+.otros-servicios {
+    background-color: #000;          /* Fondo negro */
+    color: #efefef;                /* Texto claro */
+    padding: 3rem 2rem;
+    border-radius: 20px;          /* Opcional: Bordes redondeados */
+    margin: 3rem auto;
+    max-width: 900px;
+    text-align: center; /* Centrar el contenido del contenedor */
+}
+
+.otros-servicios h2,
+.otros-servicios p,
+.otros-servicios ul,
+.otros-servicios li,
+.otros-servicios h3 {
+    color: #efefef;       /* Asegurar que el texto dentro sea claro */
+    text-align: left;  /* Restablecer la alineación del texto a la izquierda */
+}
+
+
+.boton-cotizar {
+    display: inline-block;
+    background-color: #efefef;  /* Fondo claro */
+    color: #000;            /* Texto oscuro */
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;      /* Hace el botón ovalado */
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.boton-cotizar:hover {
+    background-color: #d4d4d4;  /* Cambio de color al pasar el ratón */
+    color: #000;
+}
+
+.bloque-cotizar {
+  background-color: #000;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.contenido-cotizar {
+  max-width: 600px;
+}
+
+.bloque-cotizar h3 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.bloque-cotizar p {
+  margin-bottom: 1rem;
+}
+
+.btn-cotizar {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-cotizar:hover {
+  background-color: #E54929;
+  color: white;
+}
+.fases-container {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fases-container.abierto {
+  max-height: 1000px; /* grande para permitir expansión */
+  opacity: 1;
+  transform: translateY(0);
+}
+.toggle-fases {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 8px; /* 👈 Esto redondea el botón */
+}
+.proceso-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.proceso-left,
+.proceso-right {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .proceso-grid {
+    flex-direction: column;
+  }
+
+  .proceso-left,
+  .proceso-right {
+    width: 100%;
+  }
+.proceso-section {
+  width: 100%;
+  padding: 40px;
+}
+
+.proceso-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
 /* Aplica misma fuente y estilo a todos los placeholders */
 ::placeholder {
-  font-family: 'TuFuentePrincipal', sans-serif; /* Reemplaza si usas otra */
+  font-family: 'poppins', sans-serif; /* Reemplaza si usas otra */
   font-size: 16px; /* O el mismo tamaño que uses para inputs */
   color: #999; /* Opcional, gris claro */
   opacity: 1; /* Asegura que no esté muy transparente */
 }
+
